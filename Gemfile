@@ -5,8 +5,13 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem "pg", :group => :production
-gem "sqlite3-ruby", :group => :development
+group :development do
+  gem "sqlite3"
+end
+
+group :production do
+  gem "pg"
+end
 
 gem 'json'
 
